@@ -20,8 +20,14 @@
 /*  font-family: Arial, Helvetica, sans-serif;*/
 /*}*/
 
+.skip-ink {
+    text-decoration-skip-ink: none;
+}
+
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+    .text-balance {
+        text-wrap: balance;
+    }
+
+
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
+import { Fira_Sans } from 'next/font/google';
 import './globals.css';
 
 const geistSans = localFont({
@@ -11,6 +12,12 @@ const geistMono = localFont({
   src: './fonts/GeistMonoVF.woff',
   variable: '--font-geist-mono',
   weight: '100 900',
+});
+
+const firaSans = Fira_Sans({
+  subsets: ['latin'],
+  display: 'auto',
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 });
 
 export const metadata: Metadata = {
@@ -27,11 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html data-theme={currentTheme} lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={`${firaSans.className} antialiased`}>{children}</body>
     </html>
   );
 }

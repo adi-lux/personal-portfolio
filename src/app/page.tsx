@@ -1,13 +1,15 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import GithubIcon from '../../public/github-mark.svg';
 import LinkedinIcon from '../../public/linkedin-icon.svg';
 import EnvelopeIcon from '../../public/envelope-icon.svg';
+import DropDown from '../../public/dropdown.svg';
 
 export default function Home() {
   return (
     <div>
       <header>
-        <nav className="navbar bg-base-100 ">
+        <nav className="navbar bg-base-100 shadow shadow-accent-content/5 ">
           <div className="navbar-start">
             <div className="dropdown">
               <div
@@ -15,55 +17,49 @@ export default function Home() {
                 role="button"
                 className="btn btn-ghost lg:hidden"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h8m-8 6h16"
-                  />
-                </svg>
+                <Image src={DropDown} alt="Dropdown Menu Icon"></Image>
               </div>
               <ul
                 tabIndex={0}
                 className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
               >
                 <li>
-                  <a>Item 1</a>
+                  <Link href="/experience">Experience</Link>
                 </li>
                 <li>
-                  <a>Parent</a>
-                  <ul className="p-2">
-                    <li>
-                      <a>Submenu 1</a>
-                    </li>
-                    <li>
-                      <a>Submenu 2</a>
-                    </li>
-                  </ul>
+                  <Link href="/experience">Projects</Link>
                 </li>
                 <li>
-                  <a>Item 3</a>
+                  <Link href="/experience">Hobbies</Link>
                 </li>
               </ul>
             </div>
           </div>
           <div className="navbar-center hidden lg:flex">
-            <ul className="menu menu-horizontal px-1">
+            <ul className="menu menu-horizontal text-xl px-1">
               <li>
-                <a>Item 1</a>
+                <Link
+                  className="decoration-transparent transition ease-in delay-75 duration 200 hover:underline hover:decoration-double hover:decoration-accent skip-ink"
+                  href="/experience"
+                >
+                  Experience
+                </Link>
               </li>
               <li>
-                <a>Item 2</a>
+                <Link
+                  className="decoration-transparent transition ease-in delay-75 duration 200 hover:underline hover:decoration-double hover:decoration-accent skip-ink"
+                  href="/projects"
+                >
+                  Projects
+                </Link>
               </li>
               <li>
-                <a>Item 3</a>
+                <Link
+                  className="decoration-transparent transition ease-in delay-75 duration 200 hover:underline hover:decoration-double hover:decoration-accent skip-ink"
+                  href="/hobbies"
+                >
+                  Hobbies
+                </Link>
               </li>
             </ul>
           </div>
@@ -110,7 +106,7 @@ export default function Home() {
           </div>
         </nav>
       </header>
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+      <main className="flex flex-col gap-8 row-start-2 items-center ">
         <div>Adithya Anandsaikrishnan</div>
         <div>skills</div>
         <div>timeline</div>
