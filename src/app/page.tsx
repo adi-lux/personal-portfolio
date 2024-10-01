@@ -1,7 +1,6 @@
 import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import Image from 'next/image';
-import Link from 'next/link';
+import ResponsiveCard from '@/components/ResponsiveCard';
 
 export default function Home() {
   return (
@@ -9,7 +8,7 @@ export default function Home() {
       <Header />
 
       <main className="flex flex-col gap-8 row-start-2 items-center px-4 py-10 lg:px-24 bg-base-200">
-        <div className="grid grid-rows-[200px_0.8fr_2fr] md:grid-rows-[300px_0.8fr_2fr] gap-8 bg-base-100  shadow-lg shadow-content">
+        <div className="grid grid-rows-[200px_0.6fr_2fr] md:grid-rows-[300px_0.6fr_2fr] gap-8 bg-base-100  shadow-lg shadow-content">
           <section className="grid grid-rows-1 grid-cols-2 items-center bg-secondary rounded-md text-secondary-content hover:shadow-md hover:shadow-primary ">
             <div className="pl-4 row-start-1 col-start-1 col-span-1 bg-200">
               <h1 className="text-xl md:text-2xl lg:text-4xl font-extrabold">
@@ -28,7 +27,7 @@ export default function Home() {
             />
           </section>
           <section className="flex flex-col gap-4 px-4">
-            <h2 className="text-justify text-lg md:text-xl lg:text-3xl font-bold">
+            <h2 className="text-lg md:text-xl lg:text-3xl font-bold">
               Get to Know Me
             </h2>
             <p className="text-start max-w-3xl">
@@ -51,20 +50,9 @@ export default function Home() {
           </section>
           <section className="flex flex-col gap-4 px-4">
             <h2 className="text-justify text-lg md:text-xl lg:text-3xl font-bold">
-              Timeline
+              Professional Timeline
             </h2>
-            <p>
-              Here lies my timeline for the last couple of years. More details
-              can be found on my{' '}
-              <Link
-                className="text-accent-content underline"
-                href="https://www.linkedin.com/in/adithya-anandsaikrishnan/details/featured/"
-              >
-                Linkedin
-              </Link>
-              .
-            </p>
-            <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+            <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical text-base-content">
               <li>
                 <div className="timeline-middle">
                   <svg
@@ -271,9 +259,31 @@ export default function Home() {
               </li>
             </ul>
           </section>
+          {/*TODO: add more projects later*/}
+          <section className="flex flex-col gap-4 px-4">
+            <h2
+              id="projects"
+              className="text-lg md:text-xl lg:text-3xl font-bold"
+            >
+              Projects
+            </h2>
+            <ResponsiveCard
+              img="/rings.png"
+              alt="Record"
+              title="Rings"
+              description="A social blogging site based on interest groups and friend circles. Every user can be part of rings, or groups, where they can share posts or chat with everyone else in the ring. Meant to harken back to the old web, where search was limited and people used webrings as a way to find each other. Made with React and TypeScript, storing information with MongoDB and hosting backend server on Express.js. "
+              link="https://github.com/adi-lux/Rings"
+            />
+            <ResponsiveCard
+              img="/TBD.png"
+              alt="Record"
+              title="To Be Detected"
+              description="Using the satellite data from the 2021 IEEE GRSS Data Fusion Contest, I collaborated with others to create a segmentation model that categorized settlements with electricity from the satellite imagery. There are 4 different models, including UNet, UNet++, ResNET Transfer, and a Segmentation CNN. Pytorch Lightning, NumPy, and OpenCV2 were notable used libraries."
+              link="https://docs.google.com/document/d/1Of_-xp7ZGaOAuNhiBMr_bhsliKD_DsRNgxQ7cHU2vAo/edit?usp=sharing"
+            />
+          </section>
         </div>
       </main>
-      <Footer />
     </div>
   );
 }

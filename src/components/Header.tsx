@@ -31,15 +31,7 @@ export default function Header() {
               <li>
                 <Link
                   className="decoration-transparent transition ease-in delay-75 duration 200 hover:underline hover:decoration-double hover:decoration-accent  skip-ink"
-                  href="/experience"
-                >
-                  Experience
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="decoration-transparent transition ease-in delay-75 duration 200 hover:underline hover:decoration-double hover:decoration-accent  skip-ink"
-                  href="/projects"
+                  href="/#projects"
                 >
                   Projects
                 </Link>
@@ -47,9 +39,9 @@ export default function Header() {
               <li>
                 <Link
                   className="decoration-transparent transition ease-in delay-75 duration 200 hover:underline hover:decoration-double hover:decoration-accent  skip-ink"
-                  href="/contact"
+                  href="/resume"
                 >
-                  Contact Me
+                  Resume
                 </Link>
               </li>
             </ul>
@@ -72,27 +64,28 @@ export default function Header() {
             <li>
               <Link
                 className="decoration-transparent transition ease-in delay-75 duration 200 hover:underline hover:decoration-double hover:decoration-accent skip-ink"
-                href="/experience"
+                href="/"
               >
-                Experience
+                Home
               </Link>
             </li>
             <li>
               <Link
                 className="decoration-transparent transition ease-in delay-75 duration 200 hover:underline hover:decoration-double hover:decoration-accent skip-ink"
-                href="/projects"
+                href="/#projects"
               >
                 Projects
               </Link>
             </li>
-            <li>
-              <Link
-                className="decoration-transparent transition ease-in delay-75 duration 200 hover:underline hover:decoration-double hover:decoration-accent skip-ink"
-                href="/contact"
-              >
-                Contact Me
-              </Link>
-            </li>
+            {/*<li>*/}
+            {/*  <Link*/}
+            {/*    className="decoration-transparent transition ease-in delay-75 duration 200 hover:underline hover:decoration-double hover:decoration-accent skip-ink"*/}
+            {/*    href="/Adithya_Anandsaikrishnan_Resume.pdf"*/}
+            {/*    download*/}
+            {/*  >*/}
+            {/*    Resume*/}
+            {/*  </Link>*/}
+            {/*</li>*/}
           </ul>
         </div>
         <div className="navbar-end flex flex-row gap-3">
