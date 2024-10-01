@@ -5,6 +5,9 @@ import Link from 'next/link';
 import GithubIcon from '../../public/github-mark.svg';
 import LinkedinIcon from '../../public/linkedin-icon.svg';
 import EnvelopeIcon from '../../public/envelope-icon.svg';
+import DownloadIcon from '../../public/download.svg';
+import ProjectsIcon from '../../public/project.svg';
+import HomeIcon from '../../public/home.svg';
 
 export default function Header() {
   return (
@@ -30,17 +33,47 @@ export default function Header() {
             >
               <li>
                 <Link
+                  className="decoration-transparent transition ease-in delay-75 duration 200 hover:underline hover:decoration-double hover:decoration-accent skip-ink"
+                  href="/"
+                >
+                  <Image
+                    className="dark:invert sm:w-4 sm:h-4 md:w-6 md:h-6 lg:h-8 lg:w-8"
+                    src={HomeIcon}
+                    alt="Home Icon"
+                    width="24"
+                    height="24"
+                  />
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
                   className="decoration-transparent transition ease-in delay-75 duration 200 hover:underline hover:decoration-double hover:decoration-accent  skip-ink"
                   href="/#projects"
                 >
+                  <Image
+                    className="dark:invert sm:w-4 sm:h-4 md:w-6 md:h-6 lg:h-8 lg:w-8"
+                    src={ProjectsIcon}
+                    alt="Project Icon"
+                    width="24"
+                    height="24"
+                  />{' '}
                   Projects
                 </Link>
               </li>
               <li>
                 <Link
                   className="decoration-transparent transition ease-in delay-75 duration 200 hover:underline hover:decoration-double hover:decoration-accent  skip-ink"
-                  href="/resume"
+                  href="/Adithya_Anandsaikrishnan_resume.pdf"
+                  download
                 >
+                  <Image
+                    className="dark:invert sm:w-4 sm:h-4 md:w-6 md:h-6 lg:h-8 lg:w-8"
+                    src={DownloadIcon}
+                    alt="Download Icon"
+                    width="24"
+                    height="24"
+                  />
                   Resume
                 </Link>
               </li>
@@ -66,6 +99,13 @@ export default function Header() {
                 className="decoration-transparent transition ease-in delay-75 duration 200 hover:underline hover:decoration-double hover:decoration-accent skip-ink"
                 href="/"
               >
+                <Image
+                  className="dark:invert sm:w-4 sm:h-4 md:w-6 md:h-6 lg:h-8 lg:w-8"
+                  src={HomeIcon}
+                  alt="Home Icon"
+                  width="24"
+                  height="24"
+                />
                 Home
               </Link>
             </li>
@@ -74,22 +114,36 @@ export default function Header() {
                 className="decoration-transparent transition ease-in delay-75 duration 200 hover:underline hover:decoration-double hover:decoration-accent skip-ink"
                 href="/#projects"
               >
+                <Image
+                  className="dark:invert sm:w-4 sm:h-4 md:w-6 md:h-6 lg:h-8 lg:w-8"
+                  src={ProjectsIcon}
+                  alt="Project Icon"
+                  width="24"
+                  height="24"
+                />
                 Projects
               </Link>
             </li>
-            {/*<li>*/}
-            {/*  <Link*/}
-            {/*    className="decoration-transparent transition ease-in delay-75 duration 200 hover:underline hover:decoration-double hover:decoration-accent skip-ink"*/}
-            {/*    href="/Adithya_Anandsaikrishnan_Resume.pdf"*/}
-            {/*    download*/}
-            {/*  >*/}
-            {/*    Resume*/}
-            {/*  </Link>*/}
-            {/*</li>*/}
+            <li>
+              <Link
+                className="decoration-transparent transition ease-in delay-75 duration 200 hover:underline hover:decoration-double hover:decoration-accent skip-ink"
+                href="/Adithya_Anandsaikrishnan_resume.pdf"
+                download
+              >
+                <Image
+                  className="dark:invert sm:w-4 sm:h-4 md:w-6 md:h-6 lg:h-8 lg:w-8"
+                  src={DownloadIcon}
+                  alt="Download PDF Icon"
+                  width="24"
+                  height="24"
+                />
+                Resume
+              </Link>
+            </li>
           </ul>
         </div>
         <div className="navbar-end flex flex-row gap-3">
-          <a
+          <Link
             role="link"
             href="https://github.com/adi-lux"
             className=" hover:rounded-full hover:bg-gray-300 active:bg-gray-400"
@@ -101,8 +155,8 @@ export default function Header() {
               width="24"
               height="24"
             />
-          </a>
-          <a
+          </Link>
+          <Link
             role="link"
             href="https://www.linkedin.com/in/adithya-anandsaikrishnan/"
             className=" hover:rounded-full hover:bg-gray-300 active:bg-gray-400"
@@ -114,8 +168,8 @@ export default function Header() {
               width="24"
               height="24"
             />
-          </a>
-          <a
+          </Link>
+          <Link
             role="link"
             href="mailto:anandsaikrishnan.adithya@gmail.com"
             className="hover:bg-gray-300 active:bg-gray-400"
@@ -127,7 +181,7 @@ export default function Header() {
               width="24"
               height="24"
             />
-          </a>
+          </Link>
         </div>
       </nav>
     </header>

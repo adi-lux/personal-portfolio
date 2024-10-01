@@ -10,7 +10,7 @@ export default function Home() {
       <main className="flex flex-col gap-8 row-start-2 items-center px-4 py-10 lg:px-24 bg-base-200">
         <div className="grid grid-rows-[200px_0.6fr_2fr] md:grid-rows-[300px_0.6fr_2fr] gap-8 bg-base-100  shadow-lg shadow-content">
           <section className="grid grid-rows-1 grid-cols-2 items-center bg-secondary rounded-md text-secondary-content hover:shadow-md hover:shadow-primary ">
-            <div className="pl-4 row-start-1 col-start-1 col-span-1 bg-200">
+            <div className="px-4 md:px-10 row-start-1 col-start-1 col-span-1 bg-200">
               <h1 className="text-xl md:text-2xl lg:text-4xl font-extrabold">
                 Adithya Anandsaikrishnan
               </h1>
@@ -19,14 +19,14 @@ export default function Home() {
               </h2>
             </div>
             <Image
-              className="col-start-2 col-span-1 justify-self-end w-40 lg:h-72 lg:w-72 rounded-full p-4"
+              className="col-start-2 col-span-1 justify-self-end w-40 lg:h-72 lg:w-72 rounded-full  p-4"
               src="/portrait.png"
               alt="Portrait of Adithya"
               width="300"
               height="300"
             />
           </section>
-          <section className="flex flex-col gap-4 px-4">
+          <section className="flex flex-col gap-4 px-4 md:px-10">
             <h2 className="text-lg md:text-xl lg:text-3xl font-bold">
               Get to Know Me
             </h2>
@@ -48,7 +48,7 @@ export default function Home() {
               spaces that are not traditionally accessible.
             </p>
           </section>
-          <section className="flex flex-col gap-4 px-4">
+          <section className="flex flex-col gap-4 px-4 md:px-10">
             <h2 className="text-justify text-lg md:text-xl lg:text-3xl font-bold">
               Professional Timeline
             </h2>
@@ -260,7 +260,7 @@ export default function Home() {
             </ul>
           </section>
           {/*TODO: add more projects later*/}
-          <section className="flex flex-col gap-4 px-4">
+          <section className="flex flex-col gap-4 px-4 md:px-10">
             <h2
               id="projects"
               className="text-lg md:text-xl lg:text-3xl font-bold"

@@ -15,7 +15,7 @@ export default function ResponsiveCard({
   link: string;
 }) {
   return (
-    <div className=" card md:card-side bg-base-100 shadow-sm border-2 border-base-300/15 hover:border-base-300/45 text-xl">
+    <div className=" card md:card-side bg-base-100 shadow-sm border-2 border-base-300/15 hover:border-base-300/45">
       <figure>
         <Image src={img} alt={alt} width="300" height="300" />
       </figure>
