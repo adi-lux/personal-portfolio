@@ -64,7 +64,7 @@ export default function Header() {
               <li>
                 <Link
                   className="decoration-transparent transition ease-in delay-75 duration 200 hover:underline hover:decoration-double hover:decoration-accent  skip-ink"
-                  href="/Adithya_Anandsaikrishnan_resume.pdf"
+                  href="/Adithya_Anandsaikrishnan_Resume.pdf"
                   download
                 >
                   <Image
@@ -127,7 +127,7 @@ export default function Header() {
             <li>
               <Link
                 className="decoration-transparent transition ease-in delay-75 duration 200 hover:underline hover:decoration-double hover:decoration-accent skip-ink"
-                href="/Adithya_Anandsaikrishnan_resume.pdf"
+                href="/Adithya_Anandsaikrishnan_Resume.pdf"
                 download
               >
                 <Image
